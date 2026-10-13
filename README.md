@@ -3,12 +3,11 @@
 ![Moving Vehicles splash](splash.png)
 
 ## Description
-
-Low-poly background traffic for Unity **2018.2.8f1** and later. No
-external assets, no animations beyond baked movement, no physics —
-vehicle meshes are generated procedurally from code, and movement is
-baked into standard Unity Animation clips so nothing depends on custom
-scripts at GSPro runtime.
+A way to move objects like vehicles along a designated path at certain speeds 
+in **2018.2.8f1** and later. No external assets, no animations beyond 
+baked movement, no physics — vehicle meshes are generated procedurally from
+code, and movement is baked into standard Unity Animation clips so nothing
+depends on custom scripts at GSPro runtime.
 
 **What's included:**
 
@@ -23,16 +22,6 @@ scripts at GSPro runtime.
 | `Editor/VehiclePathEditor.cs` | Custom inspector + scene handles for VehiclePath |
 | `Editor/VehicleBaker.cs` | One-click bake tool for GSPro / asset-bundle export |
 
-**Vehicle types** (all procedurally generated, no imported meshes):
-
-| Type | Approx. size | Notes |
-|---|---|---|
-| Sedan | 4.4 m × 1.8 m × 1.5 m | |
-| Hatchback / Crossover | 4.0 m × 1.8 m × 1.7 m | |
-| Pickup Truck | 5.5 m × 1.9 m × 1.8 m | |
-| Tractor/Trailer (Semi) | 16 m × 2.4 m × 3.7 m | |
-| Food Truck (BBQ) | 5.8 m × 2.1 m × 3.6 m | Awning + sign on passenger side |
-
 A ready-to-use prefab for the food truck can be created from
 **Tools → chickenandribs → Moving Vehicles → Create Food Truck Prefab**,
 saved to `Assets/MovingVehicles/Prefabs/FoodTruck.prefab`, which can also
@@ -40,12 +29,14 @@ be dropped into any VehicleSpawner's **Custom Prefabs** list.
 
 ## Installation
 
-**Option A — copy into your project**: copy `Assets/MovingVehicles` into
-your Unity project's `Assets` folder; Unity compiles it automatically.
+**Option A — import the `.unitypackage`** (easiest): download the latest
+`.unitypackage` from this repo's
+[Releases page](https://github.com/mmoore0011/chickenandribs_movingvehicles/releases/latest),
+then in Unity: **Assets → Import Package → Custom Package…** and select
+the downloaded file.
 
-**Option B — export as `.unitypackage`**: right-click
-`Assets/MovingVehicles` → **Export Package…** → keep everything checked →
-Export. Import elsewhere via **Assets → Import Package → Custom Package…**
+**Option B — copy into your project**: copy `Assets/MovingVehicles` into
+your Unity project's `Assets` folder; Unity compiles it automatically.
 
 ## Step-by-Step Instructions
 
