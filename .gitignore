@@ -1,0 +1,14 @@
+*.unitypackage
+# Exception: this is a source asset the tool depends on (the user's own
+# food truck asset), not a build output — keep it tracked.
+!Assets/cnr_food_truck_v2.unitypackage
+MEMORY.md
+*.blend1
+*.blend2
+*.blend3
+Thumbs.db
+.DS_Store
+desktop.ini
+.vs/
+*.user
+.claude/
