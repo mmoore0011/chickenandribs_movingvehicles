@@ -78,7 +78,7 @@ namespace MovingVehicles
         public float minSpeed = 8f;
 
         [Tooltip("Fastest a vehicle can travel (world units / second). ~14 ≈ 50 km/h.")]
-        [Range(1f, 50f)]
+        [Range(1f, 1000f)]
         public float maxSpeed = 14f;
 
         // ── Sound ───────────────────────────────────────────────────────

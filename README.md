@@ -52,8 +52,18 @@ your Unity project's `Assets` folder; Unity compiles it automatically.
 > the player camera (behind a building, at the edge of render distance).
 > The green/red spheres show the actual spawn/despawn points — adjust
 > *Spawn Lead Distance* / *Despawn Lead Distance* to push them further if
-> needed. Add a **WaypointStop** component to any waypoint to make
-> vehicles pause there for a set duration before continuing.
+> needed.
+
+### Making a vehicle stop at a waypoint
+
+1. In the Hierarchy, select the specific waypoint child object (under
+   `RoadPath`) where you want vehicles to pause.
+2. **Add Component → Waypoint Stop**.
+3. Set **Stop Duration** (seconds) — vehicles pause there for that long
+   before continuing along the path. `0` means no stop.
+4. If you change the duration later, re-run the bake (see "Exporting to
+   GSPro" below) for it to take effect — stop durations are baked into
+   the movement clip, not read live at runtime.
 
 ### 2 — Add the spawner
 
@@ -120,22 +130,12 @@ settings and bake again.
 
 ## Troubleshooting
 
-- **No wheel rotation** — wheels are static low-poly cylinders; this is
-  intentional for background-only use at a distance.
-- **No collision** — vehicles can clip through each other. For
-  background traffic viewed at range this is usually unnoticeable.
-- **No LOD** — every vehicle uses the same mesh regardless of distance,
-  but poly counts are already very low (~100–350 tris/vehicle).
 - **A vehicle does a 360° spin at a sharp-turn waypoint** — this is a
   known Unity quirk (component-wise quaternion curve interpolation taking
   the "long way around" between two keyframes) and should already be
   guarded against in `VehicleBaker.cs`. If you see it anyway, check the
   version marker at the top of that file and update if it's older than
   2026-10-01.
-- Custom scripts (VehicleSpawner/VehicleController) only drive vehicles
-  in the Editor/Play mode — after baking, those scripts are disabled and
-  movement comes entirely from the baked Animation clips instead. This is
-  expected, not a bug.
 
 ## Feature Requests / Bug Reports
 
