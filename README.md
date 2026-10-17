@@ -2,6 +2,10 @@
 
 ![Moving Vehicles splash](splash.png)
 
+## Video
+
+- [Moving Vehicles — overview](https://www.youtube.com/watch?v=UauRl9eOURI)
+
 ## Description
 A way to move objects like vehicles along a designated path at certain speeds 
 in **2018.2.8f1** and later. No external assets, no animations beyond 
@@ -140,7 +144,3 @@ settings and bake again.
 ## Feature Requests / Bug Reports
 
 Please open an issue in this repository.
-
-## Video
-
-- [Moving Vehicles — overview](https://www.youtube.com/watch?v=UauRl9eOURI)
